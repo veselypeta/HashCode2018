@@ -1,6 +1,6 @@
 from Ride import Ride
 
-class Taxi:
+class Taxi():
     location = (0,0)
     ride = None
     completedRides = []
@@ -12,7 +12,7 @@ class Taxi:
         # or nothing if it doesnt have a ride
         self.rideCompleted()
         
-    def move(destination):
+    def move(self,destination):
         # this function will changed the location of the taxi to
         # move it towards a given coordinate destination
         pass
