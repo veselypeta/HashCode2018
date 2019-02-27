@@ -25,7 +25,9 @@ for r in rides:
 # create ride queues and taxi queue
 # then figure out how to sort the queue
 def simulation(city, rides):
-    taxis = [Taxi() for i in range(city.n_rides)]
+    for ride in rides:
+        print(ride.ride_number)
+    taxis = [Taxi(i) for i in range(city.n_vehicles)]
     
     for step in range(city.n_steps):
         for taxi in taxis:
