@@ -1,12 +1,13 @@
 from Ride import Ride
 
-class Taxi():
-    self.location = (0,0)
-    self.ride = None
-    self.completedRides = []
+class Taxi:
+    
     
     def __init__(self, id=-1):
         self.ride_number = id
+        self.location = (0,0)
+        self.ride = None
+        self.completedRides = []
 
     def drive(self):
         # This function will be responsible for moving a taxi towards
