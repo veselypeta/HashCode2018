@@ -1,6 +1,6 @@
 from Ride import Ride
 from City import City
-from taxi import Taxi
+
 
 def parse_data(filename):
     with open(filename, 'r') as data_file:
