@@ -4,8 +4,8 @@ class Taxi:
     
     
     def __init__(self, id=-1):
-        self.ride_number = id
-        self.location = (0,0)
+        self.taxi_number = id
+        self.current_location = (0,0)
         self.ride = None
         self.completedRides = []
 
@@ -24,4 +24,27 @@ class Taxi:
     def rideCompleted(self):
         self.completedRides.append(self.ride.ride_number)
         self.ride = None
+    
+    def get_distance(self, a, b):
+        x1, y1 = a
+        x2, y2 = b
+        return abs(x1 - x2) + abs(y1-y2)
+
+    def calculate_cost(self, nextRide):
+        # cost or remaining ride
+        if self.ride is not None:
+            ride_cost = self.get_distance(self.ride.finish, self.current_location)
+            next_ride_cost = self.get_distance(self.ride.finish,  nextRide.start)
+        else:
+            ride_cost = 0
+            next_ride_cost = self.get_distance(self.current_location, nextRide.start)
+        
+        next_ride_distance = nextRide.distance_to_destination()
+
+        return ride_cost + next_ride_cost + next_ride_distance
+
+        
+        
+
+
         
