@@ -9,9 +9,10 @@ class Ride:
         self.ride_number = id
     
     def __str__(self):
-        pass
+        return "Ride number {} from start {} to finish {}, earliest time {} , latest time {}".format(
+            self.ride_number, self.start, self.finish, self.earliest, self.latest)
 
 
-    def calculate_distance(self):
+    def distance_to_destination(self):
         return abs(self.finish[0] - self.start[0]) + abs(self.finish[1]- self.start[1])
 

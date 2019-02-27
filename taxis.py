@@ -11,6 +11,14 @@ def parse_data(filename):
         rideObjects = [Ride(*tuple(x)) for x in ridesList]
         return theCity, rideObjects
 
+city, rides = parse_data("b_should_be_easy.in")
+for r in rides:
+        print(r)
+
+
+
+# create ride queues and taxi queue
+# then figure out how to sort the queue
 def simulation(city, rides):
     for ride in rides:
         print(ride.ride_number)
@@ -28,5 +36,5 @@ def simulation(city, rides):
         print(taxi.completedRides)
         
     
-city, rides = parse_data("a_example.in")
-simulation(city, rides) 
+# city, rides = parse_data("a_example.in")
+# simulation(city, rides) 
