@@ -1,6 +1,5 @@
 from Ride import Ride
 from City import City
-from queue import *
 
 def parse_data(filename):
     with open(filename, 'r') as data_file:
@@ -13,6 +12,9 @@ def parse_data(filename):
         return theCity, rideObjects
 
 city, rides = parse_data("b_should_be_easy.in")
+for r in rides:
+        print(r)
+
 
 
 # create ride queues and taxi queue
