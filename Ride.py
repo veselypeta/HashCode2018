@@ -11,7 +11,3 @@ class Ride:
     def calculate_distance(self):
         return abs(self.finish[0] - self.start[0]) + abs(self.finish[1]- self.start[1])
 
-
-
-
-testRide = Ride()
