@@ -36,5 +36,5 @@ def simulation(city, rides):
         print(taxi.completedRides)
         
     
-city, rides = parse_data("a_example.in")
-simulation(city, rides) 
+# city, rides = parse_data("a_example.in")
+# simulation(city, rides) 
