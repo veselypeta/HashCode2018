@@ -13,8 +13,7 @@ def parse_data(filename):
         return theCity, rideObjects
 
 city, rides = parse_data("b_should_be_easy.in")
-for r in rides:
-        print(r)
+taxis = [Taxi(id=i) for i in range(city.n_rides)]
 
 
 
