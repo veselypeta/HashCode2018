@@ -12,12 +12,15 @@ def parse_data(filename):
         return theCity, rideObjects
 
 def simulation(city, rides):
+    for ride in rides:
+        print(ride.ride_number)
     taxis = [Taxi() for i in range(city.n_rides)]
     
     for step in range(city.n_steps):
         for taxi in taxis:
             if taxi.ride == None:
-                taxi.ride = rides.pop() #assign it a ride
+                if rides:
+                    taxi.ride = rides.pop() #assign it a ride
             else:
                 taxi.drive() #do something with ride
                 
