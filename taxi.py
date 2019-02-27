@@ -8,7 +8,7 @@ class Taxi:
         # either the start or end destination of its current ride,
         # waiting until its current ride is ready,
         # or nothing if it doesnt have a ride
-        pass
+        rideCompleted()
         
     def move(destination):
         # this function will changed the location of the taxi to
