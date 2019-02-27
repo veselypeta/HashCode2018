@@ -17,30 +17,28 @@ def parse_data(filename):
         rideObjects = [Ride(*tuple(x)) for x in ridesNumber]
         return theCity, rideObjects
 
-city, rides = parse_data("a_example.in")
-for r in rides:
-        print(r)
+#for r in rides:
+#   print(r)
 
 
 # create ride queues and taxi queue
 # then figure out how to sort the queue
 def simulation(city, rides):
-    for ride in rides:
-        print(ride.ride_number)
     taxis = [Taxi(i) for i in range(city.n_vehicles)]
     
     for step in range(city.n_steps):
         for taxi in taxis:
             if taxi.ride == None:
                 if rides: #If taxi does not have a ride and there are rides left
-                    taxi.ride = rides.pop() #Just assign it the first taxi in the queue
+                    taxi.ride = rides.pop(0) #Just assign it the first taxi in the queue
+                    taxi.drive(step)
             else:
-                taxi.drive() # do something with the ride
+                taxi.drive(step) # do something with the ride
 
     #print which taxi completed which ride         
     for taxi in taxis:
         print(taxi.completedRides)
         
     
-city, rides = parse_data("a_example.in")
+city, rides = parse_data("b_should_be_easy.in")
 simulation(city, rides) 
