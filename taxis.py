@@ -29,8 +29,9 @@ def simulation(city, rides):
     
     for step in range(city.n_steps):
         for taxi in taxis:
-            if taxi.ride == None and rides: #If taxi does not have a ride and there are rides left
-                taxi.ride = rides.pop() #Just assign it the first taxi in the queue
+            if taxi.ride == None:
+                if rides: #If taxi does not have a ride and there are rides left
+                    taxi.ride = rides.pop() #Just assign it the first taxi in the queue
             else:
                 taxi.drive() # do something with the ride
 
