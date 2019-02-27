@@ -1,6 +1,6 @@
 class Ride:
-    start = -1
-    end = -1
+    start = (-1,-1)
+    end = (-1,-1)
     earliest = -1
     latest = -1
 
