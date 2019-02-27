@@ -19,3 +19,15 @@ class motherfucker():
 
 Petcho = motherfucker('Petr')
 Petcho.beAMotherfucker()
+
+class bitchAssMotherfucker(motherfucker):
+
+    def __init__(self,name):
+        self.name = name
+
+    def transcend(self):
+        print("\_(-_-)_/ ahhhhhhhh")
+
+KanyeWest = bitchAssMotherfucker('ye')
+KanyeWest.beAMotherfucker()
+KanyeWest.transcend()
