@@ -1,8 +1,8 @@
 # this is a test of github change conflicts
 
-a = 6
-b = 1
-c = 9
+a = 6 - 1 # changed lines 3, 4 and 5
+b = 1 - 1
+c = 9 - 1
 d = 'd'
 e = 'e'
 
