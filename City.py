@@ -8,3 +8,4 @@ class City:
         self.ride_bonus = ride_bonus
         self.n_steps = n_steps
     
+#sdfjsdjfsjf
