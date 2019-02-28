@@ -1,5 +1,5 @@
 class City:
-    #city class
+    #citys ejhsdskdfhf
     def __init__(self, n_rows, n_columns, n_vehicles, n_rides, ride_bonus, n_steps):
         self.n_rows = n_rows
         self.n_columns = n_columns
